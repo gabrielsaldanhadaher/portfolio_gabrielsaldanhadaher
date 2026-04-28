@@ -48,6 +48,7 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 |**Músicas Suno**|Fiz 4 músicas realizadas com o SUNO| [Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/musica_sunoIA) |
 |**Machine Learning**|Machine Learning Realizado em sala para comparativo de imagens|[Ver Projeto](https://teachablemachine.withgoogle.com/models/dfvo6NXps/)|
 |**A corrida do prompt**|Aprimorando Prompts para chegar em um objetivo desejado|[Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/A%20Corrida%20do%20Prompt)|
+|**Engenharia Reversa**|Desenvolvimento de um Sistema que busca informações de um arquivo ou imagem (protótipo)|[Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/Engenharia%20Reversa)|
 ---
  
 ### 🏗 Estrutura do Repositório
