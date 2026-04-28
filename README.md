@@ -1,4 +1,4 @@
-# portfolio_gabrielsaldanhadaher
+# Portfolio Gabriel Saldanha 
 # Gabriel Saldanha Daher
 > Estudante de Análise e Desenvolvimento de Sistemas
  
@@ -46,7 +46,8 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 | **Desenvolvimento de aplicação para orçamento em IA no bubble.io ** | Aplicação de orçamento | [Ver Projeto](https://gabrieldaherm.bubbleapps.io/version-test?debug_mode=true) |
 |**Sistema de busca de informações de arquivos ou imagens**|O sistema busca informações de onde o arquivo ou a imagem veio| [Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/site_busca_ia) |
 |**Músicas Suno**|Fiz 4 músicas realizadas com o SUNO| [Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/musica_sunoIA) |
-|**Machine Learning**|Machine Learning Realizado em sala para comparativo de imagens||
+|**Machine Learning**|Machine Learning Realizado em sala para comparativo de imagens|[Ver Projeto](https://teachablemachine.withgoogle.com/models/dfvo6NXps/)|
+|**A corrida do prompt**|Aprimorando Prompts para chegar em um objetivo desejado|[Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/A%20Corrida%20do%20Prompt)|
 ---
  
 ### 🏗 Estrutura do Repositório
