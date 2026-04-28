@@ -24,7 +24,7 @@ View your app in AI Studio: https://ai.studio/apps/e64102d2-4cd6-4fd3-9f80-5e848
 ## 📝 Descrição do Projeto
 Este projeto é um sistema que descobre os vestígios de arquivos ou imagens.
  
-Desenvolvido como parte da disciplina de **Inteligência Artificial (2026.4)**, o sistema descobre rastros ou de onde vier arquivos e imagens.
+Desenvolvido como parte da disciplina de **Inteligência Artificial (2026.4)**, o sistema descobre rastros ou de onde veio arquivos e imagens.
  
  
 ## 🚀 Tecnologias Utilizadas
