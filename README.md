@@ -43,7 +43,7 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 #### 🤖 Inteligência Artificial
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
-| **Desenvolvimento de aplicação para orçamento em IA no bubble.io ** | Algoritmo de classificação para prever saída de clientes. | [Ver Projeto](https://bubble.io/home/projects?app=gabrieldaherm) |
+| **Desenvolvimento de aplicação para orçamento em IA no bubble.io ** | Algoritmo de classificação para prever saída de clientes. | [Ver Projeto](https://gabrieldaherm.bubbleapps.io/version-test?debug_mode=true) |
  
 ---
  

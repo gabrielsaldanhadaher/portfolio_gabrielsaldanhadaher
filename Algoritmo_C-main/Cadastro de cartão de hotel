@@ -1,0 +1,247 @@
+Um projeto de cadastro de hotel.
+
+#include <stdio.h> #include <stdlib.h> #include <string.h>
+
+typedef struct { int idCartao; int quarto; } Cartao;
+
+typedef struct { int idPessoa; nome de caractere[50]; quarto interno; int idCartão; } Pessoa;
+
+//---------------------------------------------------------------------- // CARTÃO CADASTRAR //------------------------------------------------------------ void cadastrarCartao(FILE *arqCartao) { Cartao c;
+
+printf("\n--- Cadastro de Cartão ---\n");
+printf("ID do cartão: ");
+scanf("%d", &c.idCartao);
+
+printf("Número do quarto: ");
+scanf("%d", &c.quarto);
+
+fprintf(arqCartao, "%d;%d\n", c.idCartao, c.quarto);
+
+printf("Cartão cadastrado!\n");
+}
+
+//---------------------------------------------------------------------- // LISTAR CARTÕES //------------------------------------------------------------ void listarCartoes(FILE *arqCartao) { Cartao c;
+
+rewind(arqCartao);
+printf("\n--- Lista de Cartões ---\n");
+
+while (fscanf(arqCartao, "%d;%d\n", &c.idCartao, &c.quarto) == 2) {
+    printf("Cartão ID: %d | Quarto: %d\n", c.idCartao, c.quarto);
+}
+}
+
+//---------------------------------------------------------------------- // VERIFICAR ACESSO //------------------------------------------------------------ void verificarAcesso(FILE *arqCartao) { Cartao c; int idBusca, quartoBusca;
+
+printf("\n--- Verificar Acesso ---\n");
+printf("ID do cartão: ");
+scanf("%d", &idBusca);
+
+printf("Quarto que deseja abrir: ");
+scanf("%d", &quartoBusca);
+
+rewind(arqCartao);
+
+while (fscanf(arqCartao, "%d;%d\n", &c.idCartao, &c.quarto) == 2) {
+    if (c.idCartao == idBusca && c.quarto == quartoBusca) {
+        printf("ACESSO PERMITIDO!\n");
+        return;
+    }
+}
+
+printf("ACESSO NEGADO!\n");
+}
+
+//---------------------------------------------------------------------- // CADASTRAR PESSOA //------------------------------------------------------------ void cadastrarPessoa(FILE *arqPessoa) { Pessoa p;
+
+printf("\n--- Cadastro de Pessoa ---\n");
+printf("ID da pessoa: ");
+scanf("%d", &p.idPessoa);
+
+getchar();
+
+printf("Nome: ");
+fgets(p.nome, 50, stdin);
+p.nome[strcspn(p.nome, "\n")] = '\0';
+
+printf("Quarto: ");
+scanf("%d", &p.quarto);
+
+p.idCartao = -1;
+
+fprintf(arqPessoa, "%d;%s;%d;%d\n", p.idPessoa, p.nome, p.quarto, p.idCartao);
+
+printf("Pessoa cadastrada!\n");
+}
+
+//---------------------------------------------------------------------- // LISTAR PESSOAS //------------------------------------------------------------ void listarPessoas(FILE *arqPessoa) { Pessoa p;
+
+rewind(arqPessoa);
+printf("\n--- Lista de Pessoas ---\n");
+
+while (fscanf(arqPessoa, "%d;%49[^;];%d;%d\n",
+              &p.idPessoa, p.nome, &p.quarto, &p.idCartao) == 4) {
+    printf("ID: %d | Nome: %s | Quarto: %d | Cartão: %d\n",
+           p.idPessoa, p.nome, p.quarto, p.idCartao);
+}
+}
+
+//---------------------------------------------------------------------- // ASSOCIAR CARTÃO A UMA PESSOA //------------------------------------------------------------ void associarCartaoPessoa(FILE *arqPessoa, FILE *arqCartao) { int idPessoa, idCartao; Pessoap; Cartao c;
+
+printf("\n--- Associar Cartão a Pessoa ---\n");
+printf("ID da pessoa: ");
+scanf("%d", &idPessoa);
+
+printf("ID do cartão: ");
+scanf("%d", &idCartao);
+
+int cartaoExiste = 0;
+rewind(arqCartao);
+
+while (fscanf(arqCartao, "%d;%d\n", &c.idCartao, &c.quarto) == 2) {
+    if (c.idCartao == idCartao) {
+        cartaoExiste = 1;
+        break;
+    }
+}
+
+if (!cartaoExiste) {
+    printf("Cartão NÃO encontrado!\n");
+    return;
+}
+
+FILE *temp = fopen("temp.txt", "w");
+if (!temp) {
+    printf("Erro ao criar arquivo temporário!\n");
+    return;
+}
+
+rewind(arqPessoa);
+int pessoaEncontrada = 0;
+
+while (fscanf(arqPessoa, "%d;%49[^;];%d;%d\n",
+              &p.idPessoa, p.nome, &p.quarto, &p.idCartao) == 4) {
+
+    if (p.idPessoa == idPessoa) {
+        p.idCartao = idCartao;
+        pessoaEncontrada = 1;
+    }
+
+    fprintf(temp, "%d;%s;%d;%d\n",
+            p.idPessoa, p.nome, p.quarto, p.idCartao);
+}
+
+fclose(temp);
+
+if (!pessoaEncontrada) {
+    printf("Pessoa NÃO encontrada!\n");
+    return;
+}
+
+freopen("pessoas.txt", "w", arqPessoa);
+temp = fopen("temp.txt", "r");
+
+char linha[200];
+while (fgets(linha, sizeof(linha), temp)) {
+    fputs(linha, arqPessoa);
+}
+
+fclose(temp);
+remove("temp.txt");
+
+printf("Cartão associado com sucesso!\n");
+}
+
+//----------------------------------------------------------------------- // ORDENAR CARTÕES POR QUARTO (BUBBLE SORT) //------------------------------------------------------------ void ordenarCartoesPorQuarto(FILE *arqCartao) { Cartao vet[200]; interno n = 0;
+
+rewind(arqCartao);
+
+while (fscanf(arqCartao, "%d;%d\n", &vet[n].idCartao, &vet[n].quarto) == 2) {
+    n++;
+}
+
+for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+        if (vet[j].quarto > vet[j + 1].quarto) {
+            Cartao temp = vet[j];
+            vet[j] = vet[j + 1];
+            vet[j + 1] = temp;
+        }
+    }
+}
+
+printf("\n--- Cartões Ordenados por Quarto ---\n");
+for (int i = 0; i < n; i++) {
+    printf("Quarto %d | Cartão ID %d\n", vet[i].quarto, vet[i].idCartao);
+}
+}
+
+//----------------------------------------------------------------------- // ORDENAR PESSOAS POR QUARTO (BUBBLE SORT) //------------------------------------------------------------ void ordenarPessoasPorQuarto(FILE *arqPessoa) { Pessoa vet[200]; interno n = 0;
+
+rewind(arqPessoa);
+
+while (fscanf(arqPessoa, "%d;%49[^;];%d;%d\n",
+              &vet[n].idPessoa, vet[n].nome,
+              &vet[n].quarto, &vet[n].idCartao) == 4) {
+    n++;
+}
+
+for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+        if (vet[j].quarto > vet[j + 1].quarto) {
+            Pessoa temp = vet[j];
+            vet[j] = vet[j + 1];
+            vet[j + 1] = temp;
+        }
+    }
+}
+
+printf("\n--- Pessoas Ordenadas por Quarto ---\n");
+for (int i = 0; i < n; i++) {
+    printf("Quarto %d | Pessoa ID %d | Nome: %s | Cartão: %d\n",
+           vet[i].quarto, vet[i].idPessoa, vet[i].nome, vet[i].idCartao);
+}
+}
+
+//----------------------------------------------------------------------- // PRINCIPAL DO PROGRAMA //------------------------------------------------------------ int main() { ARQUIVO *arqCartao = fopen("cartoes.txt", "a+"); ARQUIVO *arqPessoa = fopen("pessoas.txt", "a+");
+
+if (!arqCartao || !arqPessoa) {
+    printf("Erro ao abrir arquivos!\n");
+    return 1;
+}
+
+int opcao;
+
+do {
+    printf("\n========== SISTEMA DO HOTEL ==========\n");
+    printf("1 – Cadastrar Cartão\n");
+    printf("2 – Listar Cartões\n");
+    printf("3 – Verificar Acesso\n");
+    printf("4 – Cadastrar Pessoa\n");
+    printf("5 – Listar Pessoas\n");
+    printf("6 – Associar Cartão a Pessoa\n");
+    printf("7 – Ordenar Cartões por Quarto\n");
+    printf("8 – Ordenar Pessoas por Quarto\n");
+    printf("0 – Sair\n");
+    printf("Escolha: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1: cadastrarCartao(arqCartao); break;
+        case 2: listarCartoes(arqCartao); break;
+        case 3: verificarAcesso(arqCartao); break;
+        case 4: cadastrarPessoa(arqPessoa); break;
+        case 5: listarPessoas(arqPessoa); break;
+        case 6: associarCartaoPessoa(arqPessoa, arqCartao); break;
+        case 7: ordenarCartoesPorQuarto(arqCartao); break;
+        case 8: ordenarPessoasPorQuarto(arqPessoa); break;
+        case 0: printf("Encerrando...\n"); break;
+        default: printf("Opção inválida!\n");
+    }
+
+} while (opcao != 0);
+
+fclose(arqCartao);
+fclose(arqPessoa);
+
+return 0;
+}

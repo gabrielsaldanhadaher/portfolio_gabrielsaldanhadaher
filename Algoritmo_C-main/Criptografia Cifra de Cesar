@@ -1,0 +1,95 @@
+#include <stdio.h>
+
+
+
+
+
+int main() {
+
+    
+
+    char normal[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
+
+    char cifrado[100]; 
+
+    char palavra[100];
+
+    
+
+    
+
+    int listaShift[52] = {
+
+        2, 3, 5, 7, 11, 13, 17, 19, 23, 3, 5, 11, 15, 17, 21, 1, 7, 9, 15, 19, 21, 1, 5, 11, 19, 23,
+
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+    };
+
+    
+
+    int c1; 
+
+    int c2; 
+
+    int deslocamentoAtual;
+
+
+
+    
+
+    printf("Digite a mensagem (apenas letras, max 99): ");
+
+    scanf("%s", palavra); 
+
+    
+
+    
+
+    for (c2 = 0; palavra[c2] != '\0'; c2++) {
+
+        
+
+       
+
+        deslocamentoAtual = listaShift[c2 % 52];
+
+        
+
+        
+
+        for (c1 = 0; c1 < 52; c1++) {
+
+            if (palavra[c2] == normal[c1]) {
+
+                
+
+               
+
+                cifrado[c2] = normal[(c1 + deslocamentoAtual) % 52];
+
+                
+
+                break; 
+
+            }
+
+        }
+
+    }
+
+    
+
+   
+
+    cifrado[c2] = '\0';
+
+    
+
+    printf("RESULTADO CRIPTOGRAFADO: %s\n", cifrado);
+
+    
+
+    return 0;
+
+}
