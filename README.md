@@ -43,19 +43,27 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 #### 🤖 Inteligência Artificial
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
-| **Desenvolvimento de aplicação para orçamento em IA no bubble.io ** | Aplicação de orçamento | [Ver Projeto](https://gabrieldaherm.bubbleapps.io/version-test?debug_mode=true) |
+| **Desenvolvimento de aplicação para orçamento em IA no bubble.io** | Aplicação de orçamento | [Ver Projeto](https://gabrieldaherm.bubbleapps.io/version-test?debug_mode=true) |
 |**Sistema de busca de informações de arquivos ou imagens**|O sistema busca informações de onde o arquivo ou a imagem veio| [Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/site_busca_ia) |
 |**Músicas Suno**|Fiz 4 músicas realizadas com o SUNO| [Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/musica_sunoIA) |
 |**Machine Learning**|Machine Learning Realizado em sala para comparativo de imagens|[Ver Projeto](https://teachablemachine.withgoogle.com/models/dfvo6NXps/)|
 |**A corrida do prompt**|Aprimorando Prompts para chegar em um objetivo desejado|[Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/A%20Corrida%20do%20Prompt)|
 |**Engenharia Reversa**|Desenvolvimento de um Sistema que busca informações de um arquivo ou imagem (protótipo)|[Ver Projeto](https://github.com/gabrielsaldanhadaher/portfolio_gabrielsaldanhadaher/tree/main/Engenharia-de-Prompt-de-IA-main/Engenharia%20Reversa)|
-|**Programação de Computadores (Python)**|Projetos desenvolvidos em Python||[Ver Projeto](https://github.com/gabrielsaldanhadaher/Programa-o-de-Computdores)|
+#### 💻 Back-End
+| Projeto | Descrição | Link |
+| :--- | :--- | :---: |
+|**Programação de Computadores (Python)**|Projetos desenvolvidos em Python|[Ver Projeto](https://github.com/gabrielsaldanhadaher/Programa-o-de-Computdores)|
 |**Algoritimos e Pensamento Computacional (C)**|Projetos acadêmicos desenvolvidos em Linguagem C|[Ver Projeto](https://github.com/gabrielsaldanhadaher/Algoritmo_C)|
+
+#### 💻 Front-End
+| Projeto | Descrição | Link |
+| :--- | :--- | :---: |
 |**Projeto Pulseira Inteligente(Merak)**|Projeto Front-end com banco de dados onde desenvolvemos um sistema para a pulseira inteligente Merak|[Ver Projeto](https://github.com/gabrielsaldanhadaher/Projeto_Pulseira_Inteligente)|
 |**Projeto Hamburgeria Smoke Burger**|Projeto acadêmico de criação de um site para um hamburgeria (Smoke Burger)|[Ver Projeto](https://github.com/gabrielsaldanhadaher/Projeto_Hamburgueria_SmokeBurger)|
 ---
  
 ### 🏗 Estrutura do Repositório
+
 Abaixo, a organização deste repositório para facilitar a navegação:
  
 - `root/`: Arquivo de apresentação principal.
