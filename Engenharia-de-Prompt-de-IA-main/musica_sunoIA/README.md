@@ -1,9 +1,9 @@
-# 🎬 Músicas Relaizadas com o Suno
+# 🎬 Músicas Realizadas com o Suno
  
 ## 📝 Descrição do Projeto
 Este projeto teve como finalidade criar músicas usando a IA SUNO de acordo com letras que lhe foram enviadas.
  
-Desenvolvido como parte da disciplina de **Inteligência Artificial (2024.1)**, as músicas foram realizada com inspiração de músicas existentes.
+Desenvolvido como parte da disciplina de **Inteligência Artificial (2026.4)**, as músicas foram realizada com inspiração de músicas existentes.
  
  
 ## 🚀 Tecnologias Utilizadas
