@@ -1,0 +1,53 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: scans
+    // Document ID: auto-generated
+    // Fields:
+    //   - fileName: string (required)
+    //   - fileType: string (optional)
+    //   - timestamp: timestamp (required)
+    //   - metadata: map (required)
+    //   - aiAnalysis: string (optional)
+    //   - privacyScore: number (optional)
+    //   - uid: string (required)
+    //
+    // ===============================================================
+
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isDocOwner() {
+      return isAuthenticated() && request.auth.uid == resource.data.uid;
+    }
+
+    function isValidScan(data) {
+      return data.fileName is string && data.fileName.size() < 255 &&
+             data.timestamp is timestamp &&
+             data.metadata is map &&
+             data.uid == request.auth.uid;
+    }
+
+    match /scans/{scanId} {
+      allow read: if isDocOwner();
+      allow create: if isAuthenticated() && isValidScan(request.resource.data);
+      allow update: if false; // Scans are immutable for now
+      allow delete: if isDocOwner();
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

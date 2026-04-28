@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "Scan": {
+      "title": "Scan",
+      "description": "A metadata scan result.",
+      "type": "object",
+      "properties": {
+        "fileName": { "type": "string" },
+        "fileType": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "metadata": { "type": "object" },
+        "aiAnalysis": { "type": "string" },
+        "privacyScore": { "type": "number" },
+        "uid": { "type": "string" }
+      },
+      "required": ["fileName", "timestamp", "metadata", "uid"]
+    }
+  },
+  "firestore": {
+    "/scans/{scanId}": {
+      "schema": "Scan",
+      "description": "Collection of scan results."
+    }
+  }
+}
