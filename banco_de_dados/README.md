@@ -1,4 +1,4 @@
-# 🎬 Sistema de Recomendação de Filmes
+# 🎬 Sistema de Recrutamento de Dados
  
 ## 📝 Descrição do Projeto
 Este é um projeto de banco de dados realizado para guardar informações de uma pulseira voltada para o mundo fitness.
