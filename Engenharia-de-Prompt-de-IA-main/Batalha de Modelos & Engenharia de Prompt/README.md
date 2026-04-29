@@ -1,9 +1,9 @@
-# 🎬 Sistema de Recomendação de Filmes
+# 🔴 Comparação de LLMs
  
 ## 📝 Descrição do Projeto
-Este projeto consiste em um motor de recomendação inteligente que utiliza técnicas de filtragem colaborativa e baseada em conteúdo. O objetivo principal é mitigar a "paralisia de escolha", oferecendo aos usuários sugestões personalizadas com base em seu histórico de visualização e preferências de gênero.
+Neste projeto comparei LLMs, tokenização de cada uma e como elas desenvolvem o que é requisitado para elas.
  
-Desenvolvido como parte da disciplina de **Inteligência Artificial (2026.3)**, o sistema processa grandes volumes de dados (datasets de filmes e avaliações) para identificar padrões de comportamento e similaridades entre títulos, utilizando algoritmos de aprendizado de máquina para prever a nota que um usuário daria a um filme ainda não assistido.
+Desenvolvido como parte da disciplina de **Inteligência Artificial (2026.3)**, a atividade foi proposta para identificarmos como podemos utilizar cada LLM e suas diferenças.
 
  
 ## 🚀 Tecnologias Utilizadas
