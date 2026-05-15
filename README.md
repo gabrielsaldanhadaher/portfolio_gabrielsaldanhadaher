@@ -35,7 +35,7 @@ Meu objetivo é continuar evoluindo como um profissional que não apenas escreve
  
 * **Habilidades Técnicas:** Python, JavaScript e SQL.
 * **Habilidades Socioemocionais:** Trabalho em equipe, comunicação assertiva e pensamento crítico.
-* **Experiência/Projetos Relevantes:** Atuo em Projeto do Jogo de RPG Shatterd Souls desenvolvido em Python, onde desenvolvi noção de criação de documentação e arquitetura de software.
+* **Experiência/Projetos Relevantes:** Atuo em Projeto do Jogo de RPG Shatterd Souls desenvolvido em Python, e atuo em grandes projetos acadêmicos voltados para acessibilidade, competição entre faculdades utilizando arduíno e entre outros... Esses projetos me proporcionaram a noção de criação de documentação, arquitetura de software, lógica de programação, soft-skills e hard-skills.
  
 ---
  
