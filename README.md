@@ -33,9 +33,9 @@ Sou um eterno apaixonado por conhecimento. A área de TI exige uma atualização
 Visão de Futuro
 Meu objetivo é continuar evoluindo como um profissional que não apenas escreve código, mas que pensa o software de forma holística. Quero contribuir para projetos que desafiem meu intelecto e que exijam soluções inovadoras em Backend e Engenharia de Software. Com a base sólida que estou construindo na UNICID e a experiência prática nos projetos em Python, estou pronto para transformar desafios técnicos em soluções eficientes, sempre mantendo o entusiasmo e a leveza de quem encontrou na tecnologia sua verdadeira vocação.
  
-* **Habilidades Técnicas:** Python, JavaScript e SQL.
+* **Habilidades Técnicas:** Python, JavaScript, SQL e Power Platform
 * **Habilidades Socioemocionais:** Trabalho em equipe, comunicação assertiva e pensamento crítico.
-* **Experiência/Projetos Relevantes:** Atuo em Projeto do Jogo de RPG Shatterd Souls desenvolvido em Python, e atuo em grandes projetos acadêmicos voltados para acessibilidade, competição entre faculdades utilizando arduíno e entre outros... Esses projetos me proporcionaram a noção de criação de documentação, arquitetura de software, lógica de programação, soft-skills e hard-skills.
+* **Experiência/Projetos Relevantes:** Atuo em Projeto do Jogo de RPG Shatterd Souls desenvolvido em Python, e atuo em grandes projetos acadêmicos voltados para acessibilidade, competição entre faculdades utilizando arduíno e entre outros, além dos trabalhos acadêmicos... Esses projetos me proporcionaram a noção de criação de documentação, arquitetura de software, lógica de programação, soft-skills e hard-skills.
  
 ---
  
